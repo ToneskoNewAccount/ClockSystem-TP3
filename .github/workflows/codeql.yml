@@ -60,7 +60,7 @@ jobs:
         languages: ${{ matrix.language }}
    
     - name: Compile Java source code with Maven
-      run: mvn -B compile --file pom.xml
+      run: gradle compileJava 
        
     - if: matrix.build-mode == 'manual'
       shell: bash
