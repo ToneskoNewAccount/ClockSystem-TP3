@@ -49,4 +49,15 @@ jobs:
       uses: actions/upload-artifact@v4.6.1
       with:
         path: app/build/reports/tests
+
+    - name: Start Xvfb
+      run: Xvfb $DISPLAY -ac -screen 0 1600x1200x24 > /dev/null 2>&1 &
+    env:
+      DISPLAY: ":99.0" # Set a display for Xvfb
+    services:
+      xvfb:
+        image: selenium/standalone-chrome:latest
+        options: -e VNC_SERVER=true -e VNC_PORT=5900
+        
+
  
