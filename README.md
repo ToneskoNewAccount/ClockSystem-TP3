@@ -1,4 +1,5 @@
-Badge .yml: ![Gradle Build](https://github.com/ToneskoNewAccount/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
+ ![Gradle Build](https://github.com/ToneskoNewAccount/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
+ ![PMD Analysis](https://github.com/ToneskoNewAccount/ClockSystem-TP3/actions/workflows/pmd.yml/badge.svg)
 
 # ClockSystem
 
