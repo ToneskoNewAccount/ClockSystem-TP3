@@ -12,7 +12,7 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
+  contents: read # for actions/checkout to fetch code
 
 jobs:
   pmd-code-scan:
@@ -39,3 +39,8 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: pmd-report.sarif
+      - name: Upload PMD Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: pmd-report
+          path: build/reports/pmd/main.html
