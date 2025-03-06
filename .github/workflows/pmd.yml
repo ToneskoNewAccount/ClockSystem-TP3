@@ -39,8 +39,10 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: pmd-report.sarif
-      - name: Upload PMD Report
+
+      - name: Upload PMD Report as Artifact
         uses: actions/upload-artifact@v3
         with:
           name: pmd-report
-          path: build/reports/pmd/main.html
+          path: pmd-report.sarif
+
