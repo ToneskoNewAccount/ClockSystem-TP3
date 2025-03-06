@@ -35,14 +35,7 @@ jobs:
           rulesets: 'rulesets/java/quickstart.xml'
           sourcePath: 'src/main/java'
           analyzeModifiedFilesOnly: false
-      - name: Upload SARIF file
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: pmd-report.sarif
-
-      - name: Upload PMD Report as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: pmd-report
-          path: pmd-report.sarif
+      - name: Fail build if there are violations
+        if: steps.pmd.outputs.violations != 0
+        run: exit 1
 
