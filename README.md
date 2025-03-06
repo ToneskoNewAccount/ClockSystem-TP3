@@ -1,4 +1,4 @@
-Code quality: ![Gradle Build](https://github.com/ToneskoNewAccount/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
+Badge .yml: ![Gradle Build](https://github.com/ToneskoNewAccount/ClockSystem-TP3/actions/workflows/gradle.yml/badge.svg)
 
 # ClockSystem
 
